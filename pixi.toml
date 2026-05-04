@@ -1,17 +1,21 @@
 [workspace]
 name = "ros2-steamdeck-turtlesim"
 channels = ["conda-forge", "robostack-jazzy"]
-platforms = ["osx-arm64", "linux-64"]
+platforms = ["osx-arm64", "linux-64", "win-64", "linux-aarch64"]
 preview = ["pixi-build"]
 
 [dependencies]
 ros-jazzy-ros-base = "*"
 ros-jazzy-teleop = { path = "src/teleop/package.xml" }
+ros-jazzy-turtle-viz = { path = "src/turtle_viz/package.xml" }
+ros-jazzy-rviz2 = "*"
 pygame = "*"
 
 [tasks]
-sim = "ros2 run turtlesim turtlesim_node"
+sim    = "ros2 run turtlesim turtlesim_node"
 teleop = "ros2 run teleop teleop_node"
+viz    = "ros2 run turtle_viz turtle_viz_node"
+rviz   = "rviz2"
 
 [activation.env]
 ROS_DOMAIN_ID = "0"
