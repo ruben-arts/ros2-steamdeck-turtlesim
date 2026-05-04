@@ -12,3 +12,6 @@ pygame = "*"
 [tasks]
 sim = "ros2 run turtlesim turtlesim_node"
 teleop = "ros2 run teleop teleop_node"
+
+[activation.env]
+ROS_DOMAIN_ID = "0"
