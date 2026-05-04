@@ -1,0 +1,10 @@
+.pixi
+.claude
+.vscode
+.idea
+__pycache__
+build
+install
+log
+
+files.txt
